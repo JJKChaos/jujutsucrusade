@@ -1,5 +1,6 @@
 package com.chaos.jujutsucrusade;
 
+import com.chaos.jujutsucrusade.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +23,8 @@ public class JujutsuCrusade
     public JujutsuCrusade()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
